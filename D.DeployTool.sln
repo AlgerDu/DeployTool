@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2036
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D.DeployTool.Abstractions", "D.DeployTool.Abstractions\D.DeployTool.Abstractions.csproj", "{B4893811-9E83-4CB9-9158-169F7C0A4DEA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "D.DeployTool.Abstractions", "D.DeployTool.Abstractions\D.DeployTool.Abstractions.csproj", "{B4893811-9E83-4CB9-9158-169F7C0A4DEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D.DeployTool.Pack", "D.DeployTool.Pack\D.DeployTool.Pack.csproj", "{AEC9ED7C-7F7F-495F-B1E0-D4FD5DEAF65E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{B4893811-9E83-4CB9-9158-169F7C0A4DEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B4893811-9E83-4CB9-9158-169F7C0A4DEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B4893811-9E83-4CB9-9158-169F7C0A4DEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEC9ED7C-7F7F-495F-B1E0-D4FD5DEAF65E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEC9ED7C-7F7F-495F-B1E0-D4FD5DEAF65E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEC9ED7C-7F7F-495F-B1E0-D4FD5DEAF65E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEC9ED7C-7F7F-495F-B1E0-D4FD5DEAF65E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
