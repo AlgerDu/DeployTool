@@ -29,7 +29,7 @@ namespace D.DeployTool.Pack
                 .ConfigureLogging((config, logging) =>
                 {
                     logging.AddConfiguration(config.GetSection("logging"));
-                    logging.AddRollingFile();
+                    logging.AddRollingFile(config.GetSection("Logging:RollingFile"));
                 })
                 .Use<Startup>()
                 .Builde<PackApplication>();

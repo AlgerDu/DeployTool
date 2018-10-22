@@ -8,7 +8,7 @@
       "LogLevel": {
         "Default": "Information"
       },
-      "Path": "logs/{Date}/test.log",
+      "Path": "logs/{Date}/PackTool.log",
       "MaxFileSize": "2MB"
     }
   }
