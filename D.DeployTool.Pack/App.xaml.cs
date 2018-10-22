@@ -1,4 +1,7 @@
 ﻿using D.Utils;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -21,11 +24,12 @@ namespace D.DeployTool.Pack
             Core = new ApplicationBuilder()
                 .ConfigureAppConfiguration((config) =>
                 {
-
+                    config.AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
                 })
                 .ConfigureLogging((config, logging) =>
                 {
-
+                    logging.AddConfiguration(config.GetSection("logging"));
+                    logging.AddRollingFile();
                 })
                 .Use<Startup>()
                 .Builde<PackApplication>();
