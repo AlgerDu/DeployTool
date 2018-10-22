@@ -1,4 +1,5 @@
-﻿using D.Utils;
+﻿using Autofac;
+using D.Utils;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -17,9 +18,12 @@ namespace D.DeployTool.Pack
 
         public PackApplication(
             ILogger<PackApplication> logger
+            , ILifetimeScope lifetimeScope
             )
         {
             _logger = logger;
+
+            ViewModels.ViewModelLocator.LifetimeScope = lifetimeScope;
         }
 
         public IApplication Run()
