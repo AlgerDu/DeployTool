@@ -18,12 +18,12 @@ namespace D.DeployTool.Pack
 
         public PackApplication(
             ILogger<PackApplication> logger
-            //, ILifetimeScope lifetimeScope
+            , ILifetimeScope lifetimeScope
             )
         {
             _logger = logger;
 
-            //ViewModels.ViewModelLocator.LifetimeScope = lifetimeScope;
+            ViewModels.ViewModelLocator.LifetimeScope = lifetimeScope;
         }
 
         public IApplication Run()

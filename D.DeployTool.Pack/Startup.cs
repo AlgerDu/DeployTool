@@ -1,4 +1,6 @@
-﻿using D.Utils;
+﻿using Autofac;
+using Autofac.Extensions.DependencyInjection;
+using D.Utils;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
@@ -15,8 +17,12 @@ namespace D.DeployTool.Pack
         public ILoggerFactory LoggerFactory { get; set; }
         public IConfiguration Configuration { get; set; }
 
-        public void ConfigService(IServiceCollection service)
+        public IServiceProvider ConfigService(IServiceCollection services)
         {
+            var builder = new ContainerBuilder();
+            builder.Populate(services);
+
+            return new AutofacServiceProvider(builder.Build());
         }
     }
 }

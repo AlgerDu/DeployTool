@@ -38,11 +38,14 @@
     <Reference Include="Autofac, Version=4.8.1.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
       <HintPath>..\packages\Autofac.4.8.1\lib\net45\Autofac.dll</HintPath>
     </Reference>
+    <Reference Include="Autofac.Extensions.DependencyInjection, Version=4.3.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\packages\Autofac.Extensions.DependencyInjection.4.3.0\lib\netstandard2.0\Autofac.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
     <Reference Include="CommonServiceLocator, Version=2.0.2.0, Culture=neutral, PublicKeyToken=489b6accfaf20ef0, processorArchitecture=MSIL">
       <HintPath>..\packages\CommonServiceLocator.2.0.2\lib\net45\CommonServiceLocator.dll</HintPath>
     </Reference>
-    <Reference Include="D.Utils.Application.Abstractions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\D.Utils.Application.Abstractions.1.0.0\lib\netstandard2.0\D.Utils.Application.Abstractions.dll</HintPath>
+    <Reference Include="D.Utils.Application.Abstractions, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\D.Utils.Application.Abstractions.1.0.1\lib\netstandard2.0\D.Utils.Application.Abstractions.dll</HintPath>
     </Reference>
     <Reference Include="D.Utils.Extensions.Logging.RollingFile, Version=1.0.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\D.Utils.Extensions.Logging.RollingFile.1.0.3\lib\netstandard2.0\D.Utils.Extensions.Logging.RollingFile.dll</HintPath>
