@@ -6,7 +6,7 @@ namespace D.DeployTool
 {
     /// <summary>
     /// 环境检测项；
-    /// 比如 操作系统、framwork版本、dotnet core运行时环境；
+    /// 比如 操作系统、framework版本、dotnet core运行时环境；
     /// 暂时尽量不对外抛出异常
     /// </summary>
     public interface IEnvironmentCheckItem

@@ -26,19 +26,40 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
 
-        <materialDesign:Card Grid.RowSpan="2" Padding="15" Margin="16" 
-                             VerticalAlignment="Stretch" >
+        <GroupBox   Header="产品"
+                    Style="{DynamicResource MaterialDesignGroupBox}"
+                    Margin="16"
+                    materialDesign:ShadowAssist.ShadowDepth="Depth1"
+                    BorderThickness="1"
+                    Grid.Column="0" Grid.Row="0" Grid.RowSpan="2">
+
             <ListView>
-                <ListViewItem>
-                    Hello
+                <ListViewItem Selector.IsSelected="True">
+                    spport
                 </ListViewItem>
                 <ListViewItem>
-                    World
+                    product A
                 </ListViewItem>
                 <ListViewItem>
-                    :)
+                    product B
                 </ListViewItem>
             </ListView>
+        </GroupBox>
+
+        <materialDesign:Card Grid.Row="0" Grid.Column="1" Padding="15" Margin="16"
+                    materialDesign:ShadowAssist.ShadowDepth="Depth1"
+                    BorderThickness="1"
+                             VerticalAlignment="Stretch" >
+            <!--<TreeView>
+                <TreeViewItem Header="v1.3.35.0_beta">
+                    <TreeViewItem Header="support">
+                        <TreeViewItem Header="file server">
+                            v1.0
+                        </TreeViewItem>
+                    </TreeViewItem>
+                </TreeViewItem>
+            </TreeView>-->
+
         </materialDesign:Card>
 
     </Grid>

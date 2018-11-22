@@ -25,4 +25,16 @@ namespace D.DeployTool
         /// </summary>
         Text
     }
+
+    /// <summary>
+    /// 程序类型
+    /// </summary>
+    public enum AppType
+    {
+        WebSit,
+
+        WinService,
+
+        Exe
+    }
 }
