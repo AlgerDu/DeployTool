@@ -9,17 +9,29 @@ namespace D.DeployTool.Interfaces
     /// </summary>
     public interface IRealApplication
     {
+        /// <summary>
+        /// 应用名
+        /// </summary>
         string Name { get; }
 
+        /// <summary>
+        /// 版本号
+        /// </summary>
         string Version { get; }
 
+        /// <summary>
+        /// 应用类型
+        /// </summary>
         AppType Type { get; }
 
-        IEnumerable<IEnvironmentCheckItem> EnvironmentCheckItems { get; }
+        /// <summary>
+        /// 运行环境需求
+        /// </summary>
+        IEnumerable<IEnvironmentRequirement> Environments { get; }
 
         /// <summary>
-        /// 主文件相对路径
+        /// 文件
         /// </summary>
-        string ExecutePath { get; }
+        IAppFiles Files { get; }
     }
 }

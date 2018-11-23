@@ -7,7 +7,7 @@ namespace D.DeployTool
     /// <summary>
     /// 配置项类型
     /// </summary>
-    public enum ConfigItemType
+    public enum AppConnfigItemType
     {
         /// <summary>
         /// 数据库连接字符串
