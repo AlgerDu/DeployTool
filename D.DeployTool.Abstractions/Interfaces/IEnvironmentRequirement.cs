@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace D.DeployTool.Interfaces
+namespace D.DeployTool
 {
     /// <summary>
     /// 应用的环境需求

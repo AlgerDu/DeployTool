@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace D.DeployTool.Interfaces
+namespace D.DeployTool
 {
     public interface IAppConnfigItem
     {

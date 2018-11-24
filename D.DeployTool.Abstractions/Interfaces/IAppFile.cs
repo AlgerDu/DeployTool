@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace D.DeployTool.Interfaces
+namespace D.DeployTool
 {
     /// <summary>
     /// 程序的文件描述信息
