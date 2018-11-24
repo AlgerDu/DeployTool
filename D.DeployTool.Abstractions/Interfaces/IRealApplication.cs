@@ -30,6 +30,12 @@ namespace D.DeployTool
         AppType Type { get; }
 
         /// <summary>
+        /// 运行参数；
+        /// eg：WinService 的参数，网站的端口 等等
+        /// </summary>
+        IDictionary<string, string> RunningParams { get; }
+
+        /// <summary>
         /// 需要配置的参数
         /// </summary>
         IEnumerable<IAppConnfigItem> Configs { get; }
