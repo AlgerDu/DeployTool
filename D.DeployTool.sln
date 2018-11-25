@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuarderFactory.WinService",
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "D.DeployTool.GuarderFactorys", "D.DeployTool.GuarderFactorys", "{1DB5C749-4FCE-4CAC-8321-5F947F95F2CE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuarderFactory", "D.DeployTool.GuarderFactory\GuarderFactory.csproj", "{75200C89-05D8-41BD-8A43-A32BE48F6CF6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,12 +31,17 @@ Global
 		{4C6D6552-079B-4762-915F-DB4C55BECBA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4C6D6552-079B-4762-915F-DB4C55BECBA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4C6D6552-079B-4762-915F-DB4C55BECBA1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75200C89-05D8-41BD-8A43-A32BE48F6CF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75200C89-05D8-41BD-8A43-A32BE48F6CF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75200C89-05D8-41BD-8A43-A32BE48F6CF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75200C89-05D8-41BD-8A43-A32BE48F6CF6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{4C6D6552-079B-4762-915F-DB4C55BECBA1} = {1DB5C749-4FCE-4CAC-8321-5F947F95F2CE}
+		{75200C89-05D8-41BD-8A43-A32BE48F6CF6} = {1DB5C749-4FCE-4CAC-8321-5F947F95F2CE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F74DFFFF-0608-4A34-8C5E-DADB0B414FDE}

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using D.Utils;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -15,16 +16,11 @@ namespace D.DeployTool
         IGuardTask Task { get; }
 
         /// <summary>
-        /// 工作
+        /// 执行命令
         /// </summary>
+        /// <param name="command"></param>
         /// <returns></returns>
-        IGuarder Work();
-
-        /// <summary>
-        /// 休息
-        /// </summary>
-        /// <returns></returns>
-        IGuarder Reset();
+        IResult Execute(IGuarderCommand command);
 
         /// <summary>
         /// 最后的一些信息，方便再次获取
