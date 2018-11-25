@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "D.DeployTool.Abstractions",
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D.DeployTool.Pack", "D.DeployTool.Pack\D.DeployTool.Pack.csproj", "{AEC9ED7C-7F7F-495F-B1E0-D4FD5DEAF65E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D.DeployTool.GuarderFactory.WinService", "D.DeployTool.GuarderFactory.WinService\D.DeployTool.GuarderFactory.WinService.csproj", "{4C6D6552-079B-4762-915F-DB4C55BECBA1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{AEC9ED7C-7F7F-495F-B1E0-D4FD5DEAF65E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AEC9ED7C-7F7F-495F-B1E0-D4FD5DEAF65E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AEC9ED7C-7F7F-495F-B1E0-D4FD5DEAF65E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C6D6552-079B-4762-915F-DB4C55BECBA1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C6D6552-079B-4762-915F-DB4C55BECBA1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C6D6552-079B-4762-915F-DB4C55BECBA1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C6D6552-079B-4762-915F-DB4C55BECBA1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
