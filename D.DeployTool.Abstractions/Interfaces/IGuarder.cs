@@ -5,7 +5,7 @@ using System.Text;
 namespace D.DeployTool
 {
     /// <summary>
-    /// 守护者
+    /// 守护者，一个程序一个
     /// </summary>
     public interface IGuarder
     {
@@ -26,6 +26,15 @@ namespace D.DeployTool
         /// <returns></returns>
         IGuarder Reset();
 
-        
+        /// <summary>
+        /// 最后的一些信息，方便再次获取
+        /// </summary>
+        IDictionary<int, IGuardMessage> Messages { get; }
+
+        /// <summary>
+        /// 设置回调
+        /// </summary>
+        /// <param name="action"></param>
+        void SetReportAction(Action<IGuarder, IGuardMessage> action);
     }
 }

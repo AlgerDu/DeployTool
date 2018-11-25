@@ -5,8 +5,13 @@ using System.Text;
 
 namespace D.DeployTool
 {
-    public interface IMessage : IResult
+    public interface IGuardMessage : IResult
     {
+        /// <summary>
+        /// app uid
+        /// </summary>
+        Guid AppUid { get; }
+
         /// <summary>
         /// 时间戳
         /// </summary>
