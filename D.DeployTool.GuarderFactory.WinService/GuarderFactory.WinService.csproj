@@ -31,11 +31,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="D.Utils.Result, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\D.Utils.Result.1.0.0\lib\netstandard2.0\D.Utils.Result.dll</HintPath>
+    </Reference>
+    <Reference Include="D.Utils.Result.Abstractions, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\D.Utils.Result.Abstractions.1.0.0\lib\netstandard2.0\D.Utils.Result.Abstractions.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=2.1.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.2.1.1\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.ServiceProcess" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -51,6 +58,10 @@
     <ProjectReference Include="..\D.DeployTool.Abstractions\D.DeployTool.Abstractions.csproj">
       <Project>{b4893811-9e83-4cb9-9158-169f7c0a4dea}</Project>
       <Name>D.DeployTool.Abstractions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\D.DeployTool.GuarderFactory\GuarderFactory.csproj">
+      <Project>{75200c89-05d8-41bd-8a43-a32be48f6cf6}</Project>
+      <Name>GuarderFactory</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

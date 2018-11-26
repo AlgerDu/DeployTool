@@ -1,7 +1,9 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using D.Utils;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.ServiceProcess;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,48 +12,52 @@ namespace D.DeployTool
     /// <summary>
     /// WinService 的守护者
     /// </summary>
-    public class WinServiceGuarder : IGuarder
+    public class WinServiceGuarder : Guarder, IGuarder
     {
-        ILogger _logger;
-        IGuardTask _task;
-
-        Dictionary<int, IGuardMessage> _messages;
-
         /// <summary>
-        /// DI 构造函数
+        /// win service 的控制类
         /// </summary>
-        /// <param name="logger"></param>
-        /// <param name="task"></param>
+        ServiceController _serviceController;
+
         public WinServiceGuarder(
             ILogger<WinServiceGuarder> logger
             , IGuardTask task
-            )
+            ) : base(logger, task)
         {
-            _logger = logger;
-            _task = task;
 
-            _messages = new Dictionary<int, IGuardMessage>();
         }
 
-        #region IGuarder 实现
-        public IGuardTask Task => _task;
-
-        public IDictionary<int, IGuardMessage> Messages => _messages;
-
-        public IGuarder Reset()
+        protected override void Check()
         {
             throw new NotImplementedException();
         }
 
-        public void SetReportAction(Action<IGuarder, IGuardMessage> action)
+        protected override IResult ExecuteRunAppCmd(IGuarderCommand command)
         {
             throw new NotImplementedException();
         }
 
-        public IGuarder Work()
+        protected override IResult ExecuteStopAppCmd(IGuarderCommand command)
         {
             throw new NotImplementedException();
         }
-        #endregion
+
+        /// <summary>
+        /// 检查服务是否安装
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns></returns>
+        private bool IsServiceInstalled(string name)
+        {
+            foreach (var service in ServiceController.GetServices())
+            {
+                if (service.ServiceName == name)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        }
     }
 }

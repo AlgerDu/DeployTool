@@ -25,6 +25,11 @@ namespace D.DeployTool
         string Version { get; }
 
         /// <summary>
+        /// 程序根目录的绝对路径
+        /// </summary>
+        string Path { get; }
+
+        /// <summary>
         /// 应用类型
         /// </summary>
         AppType Type { get; }
