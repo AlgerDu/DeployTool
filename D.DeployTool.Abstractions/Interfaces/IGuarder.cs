@@ -13,7 +13,7 @@ namespace D.DeployTool
         /// <summary>
         /// 手上的任务
         /// </summary>
-        IGuardTask Task { get; }
+        IGuardTask GTask { get; }
 
         /// <summary>
         /// 执行命令

@@ -37,4 +37,30 @@ namespace D.DeployTool
 
         Exe
     }
+
+    /// <summary>
+    /// 预定义的一些命令
+    /// </summary>
+    public enum CommandCode
+    {
+        /// <summary>
+        /// 启动保护
+        /// </summary>
+        Run,
+
+        /// <summary>
+        /// 停止保护
+        /// </summary>
+        Stop,
+
+        /// <summary>
+        /// 启动 app
+        /// </summary>
+        RunApp,
+
+        /// <summary>
+        /// 停止 app
+        /// </summary>
+        StopApp
+    }
 }
