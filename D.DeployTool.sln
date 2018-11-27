@@ -11,7 +11,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuarderFactory.WinService",
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "D.DeployTool.GuarderFactorys", "D.DeployTool.GuarderFactorys", "{1DB5C749-4FCE-4CAC-8321-5F947F95F2CE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuarderFactory", "D.DeployTool.GuarderFactory\GuarderFactory.csproj", "{75200C89-05D8-41BD-8A43-A32BE48F6CF6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GuarderFactory", "D.DeployTool.GuarderFactory\GuarderFactory.csproj", "{75200C89-05D8-41BD-8A43-A32BE48F6CF6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Src", "Src", "{1FA09E3A-009F-4DC6-8764-FE3B36A5D837}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{70DEFE2B-9C69-467F-9BA9-607ADFA04AA9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -40,7 +44,10 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
+		{B4893811-9E83-4CB9-9158-169F7C0A4DEA} = {1FA09E3A-009F-4DC6-8764-FE3B36A5D837}
+		{AEC9ED7C-7F7F-495F-B1E0-D4FD5DEAF65E} = {1FA09E3A-009F-4DC6-8764-FE3B36A5D837}
 		{4C6D6552-079B-4762-915F-DB4C55BECBA1} = {1DB5C749-4FCE-4CAC-8321-5F947F95F2CE}
+		{1DB5C749-4FCE-4CAC-8321-5F947F95F2CE} = {1FA09E3A-009F-4DC6-8764-FE3B36A5D837}
 		{75200C89-05D8-41BD-8A43-A32BE48F6CF6} = {1DB5C749-4FCE-4CAC-8321-5F947F95F2CE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
