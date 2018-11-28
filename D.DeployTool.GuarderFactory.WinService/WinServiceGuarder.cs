@@ -21,17 +21,39 @@ namespace D.DeployTool
         /// </summary>
         ServiceController _serviceController;
 
+        string _serviceName;
+        string _servicePath;
+
         public WinServiceGuarder(
             ILogger<WinServiceGuarder> logger
             , IGuardTask task
             ) : base(logger, task)
         {
+            var app = task.App;
 
+            if (app.RunningParams.ContainsKey("ServiceName".ToLower()))
+            {
+                _serviceName = app.RunningParams["ServiceName".ToLower()];
+            }
+
+            _servicePath = $"{app.Path}/{task.App.Files.Exectue.Path}";
         }
 
         protected override void Check()
         {
-            throw new NotImplementedException();
+            if (string.IsNullOrEmpty(_serviceName))
+                //TODO 配置错误
+                return;
+
+            if (IsServiceInstalled(_serviceName))
+            {
+                var currentPath = CurrentExePath(_serviceName);
+
+                if (currentPath != _servicePath)
+                {
+
+                }
+            }
         }
 
         protected override IResult ExecuteRunAppCmd(IGuarderCommand command)
@@ -44,6 +66,7 @@ namespace D.DeployTool
             throw new NotImplementedException();
         }
 
+        #region 内部对 WinService 的一些控制
         /// <summary>
         /// 检查服务是否安装
         /// </summary>
@@ -66,9 +89,8 @@ namespace D.DeployTool
         /// win service 可执行文件路径是否正确，平时经常遇到安装错了
         /// </summary>
         /// <param name="name"></param>
-        /// <param name="path"></param>
         /// <returns></returns>
-        private bool IsExePathRight(string name, string path)
+        private string CurrentExePath(string name)
         {
             using (
                 ManagementObject wmiService
@@ -78,7 +100,7 @@ namespace D.DeployTool
                 wmiService.Get();
                 string currentserviceExePath = wmiService["PathName"].ToString();
 
-                return currentserviceExePath == path;
+                return currentserviceExePath;
             }
         }
 
@@ -131,9 +153,57 @@ namespace D.DeployTool
             }
         }
 
+        /// <summary>
+        /// 启动服务
+        /// </summary>
+        /// <returns></returns>
         private bool RunService()
         {
+            try
+            {
+                if (_serviceController != null)
+                {
+                    _serviceController.Start();
 
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogWarning($"WinService 启动过程中出现异常：{ex}");
+                return false;
+            }
         }
+
+        /// <summary>
+        /// 停止服务
+        /// </summary>
+        /// <returns></returns>
+        private bool StopService()
+        {
+            try
+            {
+                if (_serviceController != null)
+                {
+                    _serviceController.Stop();
+
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                _logger.LogWarning($"WinService 停止过程中出现异常：{ex}");
+                return false;
+            }
+        }
+        #endregion
     }
 }
