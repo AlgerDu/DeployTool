@@ -51,8 +51,18 @@ namespace D.DeployTool
 
                 if (currentPath != _servicePath)
                 {
+                    //TODO 上报可执行文件路径异常
+                    return;
+                }
+                else
+                {
 
                 }
+            }
+            else
+            {
+                //TODO 上报未安装
+                return;
             }
         }
 
