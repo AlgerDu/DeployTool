@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guard.Core", "D.DeployTool.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guard.Shell", "D.DeployTool.Guard.Shell\Guard.Shell.csproj", "{1C6452E0-91B5-476B-9E50-9B08A2BA8EB1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D.DeployTool.Core", "D.DeployTool.Core\D.DeployTool.Core.csproj", "{DCF4DB42-E0A8-4A6C-823A-E05681A4AA7D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +61,10 @@ Global
 		{1C6452E0-91B5-476B-9E50-9B08A2BA8EB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1C6452E0-91B5-476B-9E50-9B08A2BA8EB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1C6452E0-91B5-476B-9E50-9B08A2BA8EB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DCF4DB42-E0A8-4A6C-823A-E05681A4AA7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DCF4DB42-E0A8-4A6C-823A-E05681A4AA7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DCF4DB42-E0A8-4A6C-823A-E05681A4AA7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DCF4DB42-E0A8-4A6C-823A-E05681A4AA7D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -73,6 +79,7 @@ Global
 		{63E9DBAE-8752-489A-AF42-121B7CB89B32} = {1FA09E3A-009F-4DC6-8764-FE3B36A5D837}
 		{137C4257-DF71-480C-B4CF-9221988CACD6} = {63E9DBAE-8752-489A-AF42-121B7CB89B32}
 		{1C6452E0-91B5-476B-9E50-9B08A2BA8EB1} = {63E9DBAE-8752-489A-AF42-121B7CB89B32}
+		{DCF4DB42-E0A8-4A6C-823A-E05681A4AA7D} = {1FA09E3A-009F-4DC6-8764-FE3B36A5D837}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F74DFFFF-0608-4A34-8C5E-DADB0B414FDE}
