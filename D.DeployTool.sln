@@ -21,9 +21,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.XWinService", "Test.XW
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "D.DeployTool.Guard", "D.DeployTool.Guard", "{63E9DBAE-8752-489A-AF42-121B7CB89B32}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D.DeployTool.Guard.Core", "D.DeployTool.Guard.Core\D.DeployTool.Guard.Core.csproj", "{137C4257-DF71-480C-B4CF-9221988CACD6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guard.Core", "D.DeployTool.Guard.Core\Guard.Core.csproj", "{137C4257-DF71-480C-B4CF-9221988CACD6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "D.DeployTool.Guard.Shell", "D.DeployTool.Guard.Shell\D.DeployTool.Guard.Shell.csproj", "{1C6452E0-91B5-476B-9E50-9B08A2BA8EB1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guard.Shell", "D.DeployTool.Guard.Shell\Guard.Shell.csproj", "{1C6452E0-91B5-476B-9E50-9B08A2BA8EB1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
