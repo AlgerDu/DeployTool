@@ -5,4 +5,8 @@
     <RootNamespace>D.DeployTool</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\D.DeployTool.Abstractions\D.DeployTool.Abstractions.csproj" />
+  </ItemGroup>
+
 </Project>
