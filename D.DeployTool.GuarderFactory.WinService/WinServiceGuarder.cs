@@ -68,7 +68,9 @@ namespace D.DeployTool
 
         protected override IResult ExecuteRunAppCmd(IGuarderCommand command)
         {
-            throw new NotImplementedException();
+            Check();
+
+            return Result.CreateSuccess();
         }
 
         protected override IResult ExecuteStopAppCmd(IGuarderCommand command)
@@ -84,7 +86,8 @@ namespace D.DeployTool
         /// <returns></returns>
         private bool IsServiceInstalled(string name)
         {
-            foreach (var service in ServiceController.GetServices())
+            var installServices = ServiceController.GetServices();
+            foreach (var service in installServices)
             {
                 if (service.ServiceName == name)
                 {

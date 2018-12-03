@@ -20,7 +20,7 @@ namespace Test.Guarder
                 Type = AppType.WinService,
                 RunningParams = new Dictionary<string, string>
                 {
-                    { "ServiceName","VSS" }
+                    { "servicename","DepolyToolXService" }
                 },
                 Files = new AppFiles
                 {
