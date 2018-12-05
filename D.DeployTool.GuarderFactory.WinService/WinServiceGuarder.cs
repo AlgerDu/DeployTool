@@ -68,9 +68,27 @@ namespace D.DeployTool
 
         protected override IResult ExecuteRunAppCmd(IGuarderCommand command)
         {
-            Check();
+            if (!IsServiceInstalled(_serviceName))
+            {
+                InstallService(_servicePath);
+            }
+            else
+            {
+                string oldPath = CurrentExePath(_serviceName);
 
-            return Result.CreateSuccess();
+                if (oldPath != _servicePath)
+                {
+                    UninstallService(oldPath);
+
+                    InstallService(_servicePath);
+                }
+            }
+
+            _serviceController = new ServiceController(_serviceName);
+
+            var success = RunService();
+
+            return ConvertToResult(success);
         }
 
         protected override IResult ExecuteStopAppCmd(IGuarderCommand command)
@@ -218,5 +236,15 @@ namespace D.DeployTool
             }
         }
         #endregion
+
+        /// <summary>
+        /// TODO 找个时间添加到基类中去
+        /// </summary>
+        /// <param name="success"></param>
+        /// <returns></returns>
+        private IResult ConvertToResult(bool success)
+        {
+            return success ? Result.CreateSuccess() : Result.CreateError();
+        }
     }
 }

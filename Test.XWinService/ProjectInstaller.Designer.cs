@@ -33,6 +33,7 @@
             // 
             // XServiceProcessInstaller
             // 
+            this.XServiceProcessInstaller.Account = System.ServiceProcess.ServiceAccount.LocalSystem;
             this.XServiceProcessInstaller.Password = null;
             this.XServiceProcessInstaller.Username = null;
             // 

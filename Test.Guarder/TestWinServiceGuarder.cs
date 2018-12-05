@@ -16,7 +16,8 @@ namespace Test.Guarder
             Uid = Guid.NewGuid(),
             App = new RealApplication
             {
-                Path = "",
+                Path = AppDomain.CurrentDomain.BaseDirectory + 
+                            @"\..\..\..\Test.XWinService\bin\Debug",
                 Type = AppType.WinService,
                 RunningParams = new Dictionary<string, string>
                 {
@@ -26,7 +27,7 @@ namespace Test.Guarder
                 {
                     Exectue = new AppFile
                     {
-                        Path = ""
+                        Path = "Test.XWinService.exe"
                     }
                 }
             }
