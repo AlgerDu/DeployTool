@@ -93,7 +93,16 @@ namespace D.DeployTool
 
         protected override IResult ExecuteStopAppCmd(IGuarderCommand command)
         {
-            throw new NotImplementedException();
+            if (IsServiceInstalled(_serviceName))
+            {
+                _serviceController = new ServiceController(_serviceName);
+
+                return ConvertToResult(StopService());
+            }
+            else
+            {
+                return ConvertToResult(true);
+            }
         }
 
         #region 内部对 WinService 的一些控制
