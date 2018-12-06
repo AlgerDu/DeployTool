@@ -42,8 +42,10 @@ namespace D.DeployTool
         protected override void Check()
         {
             if (string.IsNullOrEmpty(_serviceName))
-                //TODO 配置错误
+            {
+                CreateAndReportMessage(WinServiceMessageCode.Config_Not);
                 return;
+            }
 
             if (IsServiceInstalled(_serviceName))
             {
@@ -51,17 +53,22 @@ namespace D.DeployTool
 
                 if (currentPath != _servicePath)
                 {
-                    //TODO 上报可执行文件路径异常
+                    CreateAndReportMessage(WinServiceMessageCode.Run_ExePathNotMatch);
                     return;
                 }
                 else
                 {
+                    if (_serviceController == null)
+                    {
+                        _serviceController = new ServiceController(_serviceName);
+                    }
 
+                    _serviceController.Status == ServiceControllerStatus.Running
                 }
             }
             else
             {
-                //TODO 上报未安装
+                CreateAndReportMessage(WinServiceMessageCode.Run_NotInstalled);
                 return;
             }
         }
@@ -254,6 +261,17 @@ namespace D.DeployTool
         private IResult ConvertToResult(bool success)
         {
             return success ? Result.CreateSuccess() : Result.CreateError();
+        }
+
+        private void CreateAndReportMessage(WinServiceMessageCode code)
+        {
+            var message = new GuardMessage
+            {
+                Code = (int)code,
+                TimeStamp = DateTimeOffset.Now
+            };
+
+            ReportMessage(message);
         }
     }
 }

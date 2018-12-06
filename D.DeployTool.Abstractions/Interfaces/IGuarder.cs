@@ -28,6 +28,11 @@ namespace D.DeployTool
         IDictionary<int, IGuardMessage> Messages { get; }
 
         /// <summary>
+        /// 正在执行的命令
+        /// </summary>
+        IEnumerable<IGuarderCommand> ExecutintCommands { get; }
+
+        /// <summary>
         /// 设置回调
         /// </summary>
         /// <param name="action"></param>

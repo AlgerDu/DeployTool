@@ -62,6 +62,10 @@
       <Project>{b4893811-9e83-4cb9-9158-169f7c0a4dea}</Project>
       <Name>D.DeployTool.Abstractions</Name>
     </ProjectReference>
+    <ProjectReference Include="..\D.DeployTool.Core\D.DeployTool.Core.csproj">
+      <Project>{dcf4db42-e0a8-4a6c-823a-e05681a4aa7d}</Project>
+      <Name>D.DeployTool.Core</Name>
+    </ProjectReference>
     <ProjectReference Include="..\D.DeployTool.GuarderFactory\GuarderFactory.csproj">
       <Project>{75200c89-05d8-41bd-8a43-a32be48f6cf6}</Project>
       <Name>GuarderFactory</Name>
